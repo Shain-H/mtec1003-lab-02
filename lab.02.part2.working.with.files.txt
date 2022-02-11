@@ -1,0 +1,174 @@
+MTEC1003 — LAB 02 (revised revised 2/7/21 —lg)
+
+LAB 2 / PART 2: Working With Files
+
+==========
+Follow the instructions line-by-line.
+
+* Type in the commands as is, but ignore the beginning prompt.
+* Enter, tab, up and down are represented by <ENTER><TAB>,<UP> and <DOWN>.
+* "No output" or "nothing happens" are valid answers to any of the questions.
+==========
+
+1a. Go to your home directory.
+
+Write the command that you used to do this below:
+----------
+
+cd ~
+
+==========
+1b. Prove that you're in your home directory.
+
+Write the command that you used to do this - as well as its output - below :
+----------
+
+pwd
+C:\Users\Owner
+
+==========
+1c. Create a new directory inside your home directory named after this class. Call it "mtec1003-lab-02".
+
+Write the command that you used to do this:
+----------
+
+PS C:\Users\Owner> mkdir mtec1003-lab-02
+
+==========
+
+==========
+1d. Change into your mtec1003-lab-02 directory.
+
+What command did you use?
+----------
+
+cd mtec1003-lab-02
+
+==========
+2. Create a directory called my_files.
+Then, change into your new directory.
+
+What two commands did you use?
+----------
+
+mkdir my_files
+cd my_files
+
+==========
+3. Create a new file using touch:
+
+$ touch foo.txt
+$ ls
+
+Copy and paste the output below.
+----------
+
+Foo.txt
+
+
+==========
+4. Create another new file called "bar.txt".
+
+What command did you use?
+----------
+
+touch bar.txt
+
+==========
+5. Create a copy of bar.txt called baz.txt, and then list the files again.
+
+Write the commands that you used.
+Also, copy and paste the output of your file listing below.
+----------
+
+
+cp bar.txt baz.txt
+
+$ ls -l
+total 0
+-rw-r--r-- 1 Owner 197609 0 Feb  7 15:59 bar.txt
+-rw-r--r-- 1 Owner 197609 0 Feb  7 15:59 baz.txt
+-rw-r--r-- 1 Owner 197609 0 Feb  7 15:59 foo.txt
+
+
+==========
+6. Delete the file called bar.txt and then list the files again.
+
+Write the command that you used to remove the file.
+Copy and paste the output of your file listing below.
+----------
+
+
+rm bar.txt
+
+$ ls -l
+total 0
+-rw-r--r-- 1 Owner 197609 0 Feb  7 15:59 bar.txt
+-rw-r--r-- 1 Owner 197609 0 Feb  7 15:59 baz.txt
+-rw-r--r-- 1 Owner 197609 0 Feb  7 15:59 foo.txt
+
+
+
+==========
+7. Move the file called foo.txt to qux.txt and then list the files again.
+
+
+Write the command that you used to move the file.
+Copy and paste the output of your file listing below.
+----------
+
+$ mv foo.txt qux.txt
+
+
+$ ls
+bar.txt  baz.txt  qux.txt
+
+==========
+8. Go up one directory so that you're back in ~/mtec1003-lab-02. What command did you use?
+----------
+
+cd ..
+
+==========
+9. Try removing the directory called my_files using rmdir.
+
+Write out the command that you used and what happened.
+----------
+
+$ rmdir
+rmdir: missing operand
+Try 'rmdir --help' for more information.
+
+
+==========
+10. Try removing the directory called my_files using rm.
+
+Write out the command that you used and what happened.
+----------
+
+$ rm my_files
+rm: cannot remove 'my_files': Is a directory
+
+
+==========
+11. First: MAKE SURE YOU'RE IN THE mtec1003-lab-02 directory!
+***If you accidentally delete your other files, you'll have to start over!!***
+
+Force the removal of the directory and its files using the -rf flag
+
+Use this command:
+
+$ rm -rf my_files
+(options r = recursive; f = skip confirmation)
+----------
+
+
+This worked!~
+
+==========
+
+
+STOP HERE NO MORE QUESTIONS AFTER QUESTION 11!!!
+
+And that's it! Now, go on to LAB 2 / PART 3...
+----------
