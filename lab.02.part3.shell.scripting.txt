@@ -1,0 +1,188 @@
+MTEC1003 — LAB 02 (revised 8/9/20 —lg)
+
+LAB 2 / PART 3: Shell Scripting, Permissions, Editing Text, Date and Time
+
+==========
+Follow the instructions line-by-line.  
+
+* Type in the commands as is, but ignore the beginning prompt.  
+* Enter, tab, up and down are represented by <ENTER><TAB>,<UP> and <DOWN>.  
+* "No output" or "nothing happens" are valid answers to any of the questions.
+==========
+
+
+==========
+We're going to be writing a shell script. First, though... let's figure out what day and time it is!
+==========
+
+==========
+1. What day and time is it?
+
+What command did you use, and what was its output?
+----------
+date
+Mon, Feb 7, 2022 4:19:51 PM
+
+
+
+
+
+==========
+2. Print out a calendar for this month.
+
+What command did you use, and what was its output?
+----------
+
+Cal
+Command not found im on windows
+
+
+
+==========
+3. Go to your home directory. 
+Then navigate to your mtec1003-lab-02 folder with a single command. 
+Finally, verify that you're in the right place.
+
+What 3 commands did you use to do this?
+----------
+
+cd~
+$ cd "desktop/myclasses/mtec1003/lab 2"
+
+==========
+4. Create an empty file called copy_to_backup.sh. 
+Verify that the file exists.
+
+What commands did you use to do this?
+----------
+
+$ touch copy_to_backup.sh.
+$ ls -l
+
+
+==========
+5. What are the permissions on your copy_to_backup.sh.
+
+What command did you use to find the permissions?
+----------
+
+
+ls -la
+-rw-r--r-- 1 Owner 197609    0 Feb  7 16:29 copy_to_backup.sh.
+
+
+==========
+6. Change the permissions so that this file is executable by the user.
+Verify the new permissions.
+
+What commands did you use to do this?  What was the output?
+----------
+
+chmod u+x copy_to_backup.sh.
+
+This command chmod doesnt work on gitbash
+
+
+==========
+7. Try executing the file!
+
+$ ./copy_to_backup.sh
+
+What command did you use to try to execute the file? What happens?
+----------
+
+./copy_to_backup.sh
+nothing happens
+
+
+
+
+==========
+8. Open the file with nano
+
+What command did you use to do this?
+----------
+
+
+we did this together in VS code
+
+
+
+==========
+9. In your file, write the commands to do the following
+
+a. create a directory called backup 
+b. copy all of the txt files in the current directory to the backup directory (use *.txt)
+c. print out "I'm done backing up"
+
+Don't forget the first line of your shell script! It should begin with #!/bin/bash)!
+
+Write out the code you typed into your file below...
+----------
+
+
+#!/bin/bash
+
+mkdir backup
+cp -r -v *.txt backup
+# -r = recursive (go through all files and subfolders that are matched)
+# -v = verbose (print details for each file)
+echo "I'm done backing up"
+
+
+
+==========
+10. Create a directory in your home folder called test
+----------
+
+
+
+==========
+11. Go into that directory and create two empty files... 1.txt and 2.txt
+
+What commands did you use to do this?
+----------
+
+touch 1.txt
+touch 2.txt
+
+
+
+==========
+12. Move the script that you created into this directory.
+
+What commands did you use to do this?
+----------
+
+$ cd ~/myClasses/mtec1003/"Lab 2"/
+$ mv copy_to_backup.sh ~/test/
+
+
+
+==========
+13. Run your script.
+
+What commands did you use to do this?
+----------
+
+$ cd ~/test/
+$ bash copy_to_backup.sh
+
+
+
+==========
+14. Verify that a backup folder was created in your test directory... with copies of the files present.
+
+What commands did you use to do this?  Show the output.
+----------
+
+$ ls
+1.txt  2.txt  backup/  copy_to_backup.sh*
+
+
+
+==========
+15. To finish up, using your mouse or with Terminal commands, save this file and be sure it's inside your mtec1003-lab-02 folder. (If not, move it into this folder.)
+
+When finished, be sure to COMMIT your files to your GitHub repository for week 2 labs. Follow the instructions on the Course Website under Week #2...
+----------
